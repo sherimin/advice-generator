@@ -1,0 +1,112 @@
+
+
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-size: 28px;
+    background-color: var(--dark-blue);
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+}
+
+.advice-container {
+    background-color: var(--dark-grayish-blue);
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 260px;
+    min-width: 380px;
+    max-width: 40vw;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.title {
+    color: var(--neon-green);
+    font-size: 14px;
+    font-weight: light;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h1 {
+    color: var(--light-cyan);
+    font-size: 28px;
+}
+
+.divider-mobile {
+    display: none;
+}
+
+.divider-desktop {
+    margin: 10px 20px 40px 20px;
+}
+
+#refresh-btn {
+    position: absolute;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    border: 1px solid var(--neon-green);
+    padding: 20px 20px 15px 20px;
+    cursor: pointer;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#advice-text {
+    color: var(--light-cyan);
+    flex: 1;
+}
+
+.attribution {
+    bottom: 10px;
+    font-size: 11px; 
+    text-align: center;
+    color:hsl(217, 19%, 38%);
+    left: 50%;
+    transform: translateX(-50%); 
+    position: fixed;
+}
+
+.attribution a:hover { color: var(--neon-green) };
+
+
+@media screen and (max-width: 607px) {
+    .advice-container {
+        max-width: 90% !important;
+        min-width: unset;
+        padding: 20px; 
+        height: auto;
+        background-color: aquamarine;
+    }
+
+    .divider-mobile {
+        display: block;
+        margin: 20px;
+    }
+    
+    .divider-desktop {
+        display: none;
+    }
+
+}
